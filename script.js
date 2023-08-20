@@ -3,8 +3,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     const data = await response.json();
     
     const resultsDiv = document.getElementById("results");
-    data.forEach(result => {
+    let resultsHTML = ""; // Khởi tạo chuỗi HTML rỗng
+    
+    data.forEach((result, index) => {
         const resultText = JSON.stringify(result, null, 2);
-        resultsDiv.innerHTML += `<pre>${resultText}</pre>`;
+        resultsHTML += `<pre>${resultText}</pre>`;
+        
+        // Add comma and line break if not the last element
+        if (index < data.length - 1) {
+            resultsHTML += ",<br><br>";
+        }
     });
+    
+    // Gán chuỗi HTML vào resultsDiv
+    resultsDiv.innerHTML = resultsHTML;
 });
