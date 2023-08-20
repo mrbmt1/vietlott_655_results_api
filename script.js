@@ -5,6 +5,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     const resultsDiv = document.getElementById("results");
     data.forEach(result => {
         const resultText = JSON.stringify(result);
-        resultsDiv.innerHTML += `<p>${resultText}</p>`;
+        resultsDiv.innerHTML += `<pre>${resultText}</pre>`;
     });
 });
