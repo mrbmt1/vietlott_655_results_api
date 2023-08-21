@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vietlott 655 Results API</title>
+</head>
+<body>
+    <h1>Vietlott 6/55 Results API</h1>
+    <div id="results"></div>
+
+    <script>
+        async function fetchDataAndDisplay() {
+            const response = await fetch("vietlott_result_api.json");
+            const data = await response.json();
+            
+            const resultsDiv = document.getElementById("results");
+            let resultsHTML = ""; // Khởi tạo chuỗi HTML rỗng
+            
+            data.forEach((result, index) => {
+                const resultText = JSON.stringify(result, null, 2);
+                resultsHTML += `<pre>${resultText}</pre>`;
+                
+                // Add comma and line break if not the last element
+                if (index < data.length - 1) {
+                    resultsHTML += ",<br><br>";
+                }
+            });
+            
+            // Gán chuỗi HTML vào resultsDiv
+            resultsDiv.innerHTML = resultsHTML;
+        }
+        
+        fetchDataAndDisplay();
+    </script>
+</body>
+</html>
