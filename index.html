@@ -6,7 +6,6 @@
     <title>Vietlott 655 Results API</title>
 </head>
 <body>
-    <h1>Vietlott 6/55 Results API</h1>
     <div id="results"></div>
 
     <script>
@@ -19,11 +18,11 @@
             
             data.forEach((result, index) => {
                 const resultText = JSON.stringify(result, null, 2);
-                resultsHTML += `<pre>${resultText}</pre>`;
+                resultsHTML += `<code>${resultText}</code>`;
                 
                 // Add comma and line break if not the last element
                 if (index < data.length - 1) {
-                    resultsHTML += ",<br><br>";
+                    resultsHTML += ", ";
                 }
             });
             
