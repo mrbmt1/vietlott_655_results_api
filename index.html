@@ -18,7 +18,7 @@
             
             data.forEach((result, index) => {
                 const resultText = JSON.stringify(result, null, 2);
-                resultsHTML += `<code>${resultText}</code>`;
+                resultsHTML += `<pre>${resultText}</pre>`;
                 
                 // Add comma and line break if not the last element
                 if (index < data.length - 1) {
