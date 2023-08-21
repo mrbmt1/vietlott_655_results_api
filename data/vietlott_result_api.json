@@ -32,5 +32,22 @@
         "jackpot2_prize": 0,
         "prize2_value": 3113868150,
         "jackpot2_winner": 0
+    },
+    {
+        "draw_period": 999,
+        "draw_date": "03/08/2017",
+        "number_1": "04",
+        "number_2": "09",
+        "number_3": "65",
+        "number_4": "25",
+        "number_5": "27",
+        "number_6": "45",
+        "special_number": "40",
+        "prize1_value": 31024813350,
+        "jackpot1_winner": 0,
+        "jackpot1_prize": 0,
+        "jackpot2_prize": 0,
+        "prize2_value": 3113868150,
+        "jackpot2_winner": 0
     }
 ]    
